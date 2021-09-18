@@ -1,3 +1,4 @@
+// Las clases van a ser separadas en archivos cuando el programa funcione correctamente.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class MainWidget extends StatelessWidget {
         height: 150,
         margin: EdgeInsets.all(40),
         decoration: BoxDecoration(
-          color: Colors.amber,
+            color: Colors.amber,
             border: Border.all(
               color: Colors.amber,
             ),
@@ -50,10 +51,12 @@ class MainWidget extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
             padding: EdgeInsets.all(20.0),
-            child: Container(
-              child: Column(
-                children: [Image.asset("assets/images/tux.jpg")],
-              ),
-            )));
+            child: Container(                   // Container de la imagen.
+                child: Row(
+              children: <Widget>[
+                new Image.asset("assets/images/tux.jpg", width: 50, height: 50), // Imagen problemática
+                Text(texto)
+              ],
+            ))));
   }
 }
