@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
             title: const Text('Welcome to Flutter'),
           ),
           body: Center(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
+              child: ListView(
+                //los siguientes dos no están definidos en ListView
+            //crossAxisAlignment: CrossAxisAlignment.start,
+            //mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               MainWidget("Persona1"),
               MainWidget("Persona2"),
-              MainWidget("Persona2"),
+              MainWidget("Persona3"),
             ],
           ))),
     );
