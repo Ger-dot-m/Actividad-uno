@@ -55,10 +55,19 @@ class MainWidget extends StatelessWidget {
             child: Container(                   // Container de la imagen.
                 child: Row(
                   children: <Widget>[
-                    new Image.asset(imagen, width: 50, height: 50), // Imagen problemática
+                    new Image.asset(imagen, width: 90, height: 90), // Imagen problemática
                     Column(
                       children: [
-                        Text(nombre), Text(descripcion), Text(precio)
+                        Text(nombre,
+                            style: const TextStyle(fontWeight: FontWeight.bold,
+                                                  fontFamily: 'Raleway'),
+                            ),
+                        Text(descripcion,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                        Text(precio,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                            )
                       ],
                     )
                   ],
