@@ -21,9 +21,15 @@ dev_dependencies:
 
 
 flutter:
+  fonts:
+    - family: helloFont
+      fonts:
+        - asset: assets/fonts/hello-regular.ttf
+        - asset: assets/fonts/hello-medium.ttf
+          weight: 300
+
   assets:
     - assets/images/
     - assets/images/tux.jpg
-    
-  uses-material-design: true
 
+  uses-material-design: true
