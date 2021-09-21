@@ -16,21 +16,21 @@ class MyApp extends StatelessWidget {
           body: Center(
               child: ListView(
                 //los siguientes dos no están definidos en ListView
-            //crossAxisAlignment: CrossAxisAlignment.start,
-            //mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              MainWidget("Persona1"),
-              MainWidget("Persona2"),
-              MainWidget("Persona3"),
-            ],
-          ))),
+                //crossAxisAlignment: CrossAxisAlignment.start,
+                //mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  MainWidget("Tacos", "Comida mexinaca", "8", "assets/images/tux.jpg"),
+                  MainWidget("Arroz", "Comida china", "18", "assets/images/tux.jpg"),
+                  MainWidget("Bolillos", "Comida de pan", "2", "assets/images/tux.jpg"),
+                ],
+              ))),
     );
   }
 }
 
 class MainWidget extends StatelessWidget {
-  String texto = "";
-  MainWidget(this.texto);
+  String nombre="", descripcion, precio, imagen = "";
+  MainWidget(this.nombre, this.descripcion, this.precio, this.imagen);
 
   @override
   Widget build(BuildContext context) {
@@ -54,10 +54,14 @@ class MainWidget extends StatelessWidget {
             padding: EdgeInsets.all(20.0),
             child: Container(                   // Container de la imagen.
                 child: Row(
-              children: <Widget>[
-                new Image.asset("assets/images/tux.jpg", width: 50, height: 50), // Imagen problemática
-                Text(texto)
-              ],
-            ))));
+                  children: <Widget>[
+                    new Image.asset(imagen, width: 50, height: 50), // Imagen problemática
+                    Column(
+                      children: [
+                        Text(nombre), Text(descripcion), Text(precio)
+                      ],
+                    )
+                  ],
+                ))));
   }
 }
