@@ -64,7 +64,19 @@ class MainWidget extends StatelessWidget {
                 Container(
                     child: Padding(
                         padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
-                        child: new Image.asset(imagen, width: 90, height: 90))),
+
+                        child: IconButton(
+                          icon: Image.asset(imagen),
+                          iconSize: 100,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const menu1()),
+                            );
+                          },
+                        )
+
+                    )),
                 Column(
                   children: [
                     Text(
@@ -85,5 +97,28 @@ class MainWidget extends StatelessWidget {
                 )
               ],
             ))));
+  }
+}
+
+
+class menu1 extends StatelessWidget {
+  const menu1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: const Text("Comida 1"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Regresar'),
+        ),
+      ),
+    );
   }
 }
