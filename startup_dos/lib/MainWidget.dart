@@ -46,6 +46,9 @@ class MainWidget extends StatelessWidget {
                         ),
                         Text(
                           descripcion,
+                          style: const TextStyle(
+                            color: Colors.black54,
+                          ),
                         ),
                         Row(
                           children: <Widget>[
@@ -109,4 +112,5 @@ class menu1 extends StatelessWidget {
       ),
     );
   }
+}
 }
