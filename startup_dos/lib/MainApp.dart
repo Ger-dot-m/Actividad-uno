@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
       title: 'Welcome to Flutter',
       home: Scaffold(
           appBar: AppBar(
-            title: const Text('\t\t\tComida mexicana',
+            title: const Text('Comida mexicana',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 50,
                   fontFamily: 'helloFont',
@@ -19,36 +20,21 @@ class MyApp extends StatelessWidget {
           ),
           body: Center(
               child: ListView(
-                //los siguientes dos no están definidos en ListView
-                //crossAxisAlignment: CrossAxisAlignment.start,
-                //mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  MainWidget(
-                      "Enchiladas rancheras",
-                      "Cerdo cocido a fuego...",
-                      "90.00",
-                      "assets/images/tux.jpg"),
-                  MainWidget("Chimichanga", "Pollo marinado, pimi...",
-                      "70.00", "assets/images/tux.jpg"),
-                  MainWidget("Burrito", "La carne que tú elijas...",
-                      "45.00", "assets/images/tux.jpg"),
-                  MainWidget(
-                      "Pollo en chipotle",
-                      "Pechuga de pollo ad...",
-                      "110.00",
-                      "assets/images/tux.jpg"),
-                  MainWidget(
-                      "Pez dorado mexicano",
-                      "Pez dorado, aguacat...",
-                      "180.00",
-                      "assets/images/tux.jpg"),
-                  MainWidget(
-                      "Filete con chimichurri",
-                      "Filete de falda de re....",
-                      "220.00",
-                      "assets/images/tux.jpg"),
-                ],
-              ))),
+            children: <Widget>[
+              MainWidget("Enchiladas rancheras", "Cerdo cocido a fuego...",
+                  "90.00", "assets/images/enchiladas.jpeg"),
+              MainWidget("Chimichanga", "Pollo marinado, pimi...", "70.00",
+                  "assets/images/chimichangas.jpg"),
+              MainWidget("Burrito", "La carne que tú elijas...", "45.00",
+                  "assets/images/burritos.jpg"),
+              MainWidget("Pollo en chipotle", "Pechuga de pollo ad...",
+                  "110.00", "assets/images/pollo.jpg"),
+              MainWidget("Pez dorado mexicano", "Pez dorado, aguacat...",
+                  "180.00", "assets/images/pez_dorado.jpg"),
+              MainWidget("Filete con chimichurri", "Filete de falda de re....",
+                  "220.00", "assets/images/filete.jpg"),
+            ],
+          ))),
     );
   }
 }
