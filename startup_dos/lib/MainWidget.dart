@@ -10,11 +10,11 @@ class MainWidget extends StatelessWidget {
     return Container(
         width: 300,
         height: 150,
-        margin: EdgeInsets.all(40),
+        margin: EdgeInsets.all(30),
         decoration: BoxDecoration(
-            color: Colors.redAccent,
+            color: Colors.cyan.shade500,
             border: Border.all(
-              color: Colors.redAccent,
+              color: Colors.cyan.shade500,
             ),
             boxShadow: <BoxShadow>[
               BoxShadow(
@@ -24,7 +24,7 @@ class MainWidget extends StatelessWidget {
             ],
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.only(top:20, bottom:0, left:20, right:20),
             child: Container(
               // Container de la imagen.
                 child: Row(
@@ -32,32 +32,43 @@ class MainWidget extends StatelessWidget {
                     Container(
                         child: Padding(
                           padding:
-                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
-                          child: new Image.asset(imagen, width: 100, height: 100),
+                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+                          child: new Image.asset(imagen, width: 75, height: 75),
                         )),
                     Column(
                       children: [
                         Text(
                           nombre,
                           style: const TextStyle(
-                            fontSize: 40,
+                            fontSize: 30,
                             fontFamily: 'helloFont',
                           ),
                         ),
                         Text(
                           descripcion,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Row(
                           children: <Widget>[
                             Text(
-                              "\$" + precio,
+                              "   \$" + precio,
                               style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Container(
                               margin: EdgeInsets.symmetric(
-                                  vertical: 0.0, horizontal: 40.0),
-                              color: Colors.blue, //Color azul
+                                  vertical: 10.0, horizontal: 20.0),
+
+                              decoration: BoxDecoration(
+                        color: Colors.green.shade400,
+                    border: Border.all(
+              color: Colors.green.shade400,
+            ),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 15.0,
+                  offset: Offset(0.0, 0.75))
+            ],
+            borderRadius: BorderRadius.all(Radius.circular(10))), //Color azul
                               child: FlatButton(
                                 child: Text("Ver"),
                                 onPressed: () {
