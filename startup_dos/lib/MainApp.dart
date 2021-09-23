@@ -9,12 +9,13 @@ class MyApp extends StatelessWidget {
       title: 'Welcome to Flutter',
       home: Scaffold(
           appBar: AppBar(
-            title: const Text('\t\t\t\tComida mexicana',
+            title: const Text('\t\t\tComida mexicana',
                 style: TextStyle(
                   fontSize: 50,
                   fontFamily: 'helloFont',
+                  fontWeight: FontWeight.bold,
                 )),
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.red,
           ),
           body: Center(
               child: ListView(
@@ -24,26 +25,26 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                   MainWidget(
                       "Enchiladas rancheras",
-                      "Cerdo cocido a fuego lento, cebolla...\n",
+                      "Cerdo cocido a fuego...",
                       "90.00",
                       "assets/images/tux.jpg"),
-                  MainWidget("Chimichanga", "Pollo marinado, pimiento, pico...\n",
+                  MainWidget("Chimichanga", "Pollo marinado, pimi...",
                       "70.00", "assets/images/tux.jpg"),
-                  MainWidget("Burrito", "La carne que tú elijas(res, cerdo o...\n",
+                  MainWidget("Burrito", "La carne que tú elijas...",
                       "45.00", "assets/images/tux.jpg"),
                   MainWidget(
                       "Pollo en chipotle",
-                      "Pechuga de pollo adobada, jamón...\n",
+                      "Pechuga de pollo ad...",
                       "110.00",
                       "assets/images/tux.jpg"),
                   MainWidget(
                       "Pez dorado mexicano",
-                      "Pez dorado, aguacate, salsa...\n",
+                      "Pez dorado, aguacat...",
                       "180.00",
                       "assets/images/tux.jpg"),
                   MainWidget(
                       "Filete con chimichurri",
-                      "Filete de falda de res, salsa...\n",
+                      "Filete de falda de re....",
                       "220.00",
                       "assets/images/tux.jpg"),
                 ],
