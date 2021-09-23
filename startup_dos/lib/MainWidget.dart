@@ -10,7 +10,7 @@ class MainWidget extends StatelessWidget {
     return Container(
         width: 300,
         height: 150,
-        margin: EdgeInsets.all(30),
+        margin: EdgeInsets.all(20),
         decoration: BoxDecoration(
             color: Colors.cyan.shade500,
             border: Border.all(
@@ -24,71 +24,73 @@ class MainWidget extends StatelessWidget {
             ],
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
-            padding: EdgeInsets.only(top:20, bottom:0, left:20, right:20),
+            padding: EdgeInsets.only(top: 20, bottom: 0, left: 10, right: 20),
             child: Container(
-              // Container de la imagen.
+                // Container de la imagen.
                 child: Row(
-                  children: <Widget>[
-                    Container(
+              children: <Widget>[
+                Expanded(
+                    child: Container(
                         child: Padding(
-                          padding:
-                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-                          child: new Image.asset(imagen, width: 75, height: 75),
-                        )),
-                    Column(
-                      children: [
+                  padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+                  child: new Image.asset(imagen, width: 75, height: 75),
+                ))),
+                Column(
+                  children: [
+                    Text(
+                      nombre,
+                      style: const TextStyle(
+                        fontSize: 30,
+                        fontFamily: 'helloFont',
+                      ),
+                    ),
+                    Text(
+                      descripcion,
+                      style: const TextStyle(
+                        color: Colors.black54,
+                      ),
+                    ),
+                    Row(
+                      children: <Widget>[
                         Text(
-                          nombre,
-                          style: const TextStyle(
-                            fontSize: 30,
-                            fontFamily: 'helloFont',
-                          ),
+                          "   \$" + precio,
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        Text(
-                          descripcion,
-                          style: const TextStyle(
-                            color: Colors.black54,
-                          ),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text(
-                              "   \$" + precio,
-                              style: const TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(
-                                  vertical: 10.0, horizontal: 20.0),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 20.0),
 
-                              decoration: BoxDecoration(
-                        color: Colors.green.shade400,
-                    border: Border.all(
-              color: Colors.green.shade400,
-            ),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 15.0,
-                  offset: Offset(0.0, 0.75))
-            ],
-            borderRadius: BorderRadius.all(Radius.circular(10))), //Color azul
-                              child: FlatButton(
-                                child: Text("Ver"),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const menu1()),
-                                  );
-                                },
+                          decoration: BoxDecoration(
+                              color: Colors.green.shade400,
+                              border: Border.all(
+                                color: Colors.green.shade400,
                               ),
-                            )
-                          ],
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 15.0,
+                                    offset: Offset(0.0, 0.75))
+                              ],
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(10))), //Color azul
+                          child: TextButton(
+                            style: TextButton.styleFrom(primary: Colors.black),
+                            child: Text("Ver"),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const menu1()),
+                              );
+                            },
+                          ),
                         )
                       ],
-                    ),
+                    )
                   ],
-                ))));
+                ),
+              ],
+            ))));
   }
 }
 
@@ -112,5 +114,4 @@ class menu1 extends StatelessWidget {
       ),
     );
   }
-}
 }
