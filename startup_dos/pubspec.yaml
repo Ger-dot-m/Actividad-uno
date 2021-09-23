@@ -31,5 +31,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/tux.jpg
+    - assets/images/enchiladas.jpeg
+    - assets/images/chimichangas.jpg
+    - assets/images/burritos.jpg
+    - assets/images/pollo.jpg
+    - assets/images/pez_dorado.jpg
+    - assets/images/filete.jpg
 
   uses-material-design: true
