@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'MenuComida.dart';
 
 class MainWidget extends StatelessWidget {
   String nombre = "", descripcion, precio, imagen = "";
@@ -10,11 +11,13 @@ class MainWidget extends StatelessWidget {
     return Container(
         width: 300,
         height: 150,
+
         margin: EdgeInsets.all(20),
+
         decoration: BoxDecoration(
-            color: Colors.cyan.shade500,
+            color: Colors.lightBlue,
             border: Border.all(
-              color: Colors.cyan.shade500,
+              color: Colors.lightBlue,
             ),
             boxShadow: <BoxShadow>[
               BoxShadow(
@@ -32,38 +35,48 @@ class MainWidget extends StatelessWidget {
                 Expanded(
                     child: Container(
                         child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-                  child: new Image.asset(imagen, width: 75, height: 75),
-                ))),
-                Column(
-                  children: [
-                    Text(
-                      nombre,
-                      style: const TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'helloFont',
-                      ),
-                    ),
-                    Text(
-                      descripcion,
-                      style: const TextStyle(
-                        color: Colors.black54,
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Text(
-                          "   \$" + precio,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
 
-                          decoration: BoxDecoration(
-                              color: Colors.green.shade400,
-                              border: Border.all(
-                                color: Colors.green.shade400,
+                          padding:
+                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+                          child: new Image.asset(imagen, width: 75, height: 75),
+                        )),
+                    Column(
+                      children: [
+                        Text(
+                          nombre,
+                          style: const TextStyle(
+                            fontSize: 30,
+                            fontFamily: 'helloFont',
+                            color: Colors.white
+                          ),
+                        ),
+                        Text(
+                          descripcion,
+                          style: const TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              "\$" + precio,
+                              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                            ),
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 20.0),
+                              color: Colors.blue, //Color azul
+                              child: FlatButton(
+                                color: Colors.white,
+                                child: Text("Ver",
+                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.lightBlue),),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context){
+                                          return MenuComida(nombre, descripcion, precio, imagen);
+                                        }),
+                                  );
+                                },
                               ),
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
@@ -94,24 +107,3 @@ class MainWidget extends StatelessWidget {
   }
 }
 
-class menu1 extends StatelessWidget {
-  const menu1({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text("Comida 1"),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Regresar'),
-        ),
-      ),
-    );
-  }
-}
