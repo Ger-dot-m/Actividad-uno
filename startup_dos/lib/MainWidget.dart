@@ -93,7 +93,7 @@ class MainWidget extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const menu1()),
+                                    builder: (context) => const MenuComida()),
                               );
                             },
                           ),
