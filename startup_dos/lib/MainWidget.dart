@@ -11,7 +11,9 @@ class MainWidget extends StatelessWidget {
     return Container(
         width: 300,
         height: 150,
-        margin: EdgeInsets.all(40),
+
+        margin: EdgeInsets.all(20),
+
         decoration: BoxDecoration(
             color: Colors.lightBlue,
             border: Border.all(
@@ -25,23 +27,25 @@ class MainWidget extends StatelessWidget {
             ],
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.only(top: 20, bottom: 0, left: 10, right: 20),
             child: Container(
-              // Container de la imagen.
+                // Container de la imagen.
                 child: Row(
-                  children: <Widget>[
-                    Container(
+              children: <Widget>[
+                Expanded(
+                    child: Container(
                         child: Padding(
+
                           padding:
-                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
-                          child: new Image.asset(imagen, width: 100, height: 100),
+                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
+                          child: new Image.asset(imagen, width: 75, height: 75),
                         )),
                     Column(
                       children: [
                         Text(
                           nombre,
                           style: const TextStyle(
-                            fontSize: 40,
+                            fontSize: 30,
                             fontFamily: 'helloFont',
                             color: Colors.white
                           ),
@@ -58,7 +62,7 @@ class MainWidget extends StatelessWidget {
                             ),
                             Container(
                               margin: EdgeInsets.symmetric(
-                                  vertical: 0.0, horizontal: 40.0),
+                                  vertical: 10.0, horizontal: 20.0),
                               color: Colors.blue, //Color azul
                               child: FlatButton(
                                 color: Colors.white,
@@ -74,12 +78,32 @@ class MainWidget extends StatelessWidget {
                                   );
                                 },
                               ),
-                            )
-                          ],
+                              boxShadow: <BoxShadow>[
+                                BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 15.0,
+                                    offset: Offset(0.0, 0.75))
+                              ],
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(10))), //Color azul
+                          child: TextButton(
+                            style: TextButton.styleFrom(primary: Colors.black),
+                            child: Text("Ver"),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const menu1()),
+                              );
+                            },
+                          ),
                         )
                       ],
-                    ),
+                    )
                   ],
-                ))));
+                ),
+              ],
+            ))));
   }
 }
+
