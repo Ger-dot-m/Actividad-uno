@@ -11,13 +11,11 @@ class MainWidget extends StatelessWidget {
     return Container(
         width: 300,
         height: 150,
-
         margin: EdgeInsets.all(20),
-
         decoration: BoxDecoration(
-            color: Colors.lightBlue,
+            color: Colors.orange[50],
             border: Border.all(
-              color: Colors.lightBlue,
+              color: Colors.orange,
             ),
             boxShadow: <BoxShadow>[
               BoxShadow(
@@ -33,50 +31,43 @@ class MainWidget extends StatelessWidget {
                 child: Row(
               children: <Widget>[
                 Expanded(
-                    child: Container(
-                        child: Padding(
-
-                          padding:
-                          EdgeInsets.symmetric(vertical: 0.0, horizontal: 0.0),
-                          child: new Image.asset(imagen, width: 75, height: 75),
-                        )),
-                    Column(
-                      children: [
+                  child: Container(
+                      child: Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
+                    child: new Image.asset(imagen, width: 100, height: 100),
+                  )),
+                ),
+                Column(
+                  children: [
+                    Text(
+                      nombre,
+                      style: const TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'helloFont',
+                          color: Colors.black),
+                    ),
+                    // Text(
+                    //   descripcion,
+                    //   style: const TextStyle(
+                    //       fontWeight: FontWeight.bold, color: Colors.white),
+                    //),
+                    Row(
+                      children: <Widget>[
                         Text(
-                          nombre,
+                          "\$" + precio,
                           style: const TextStyle(
-                            fontSize: 30,
-                            fontFamily: 'helloFont',
-                            color: Colors.white
-                          ),
+                              fontWeight: FontWeight.bold, color: Colors.black),
                         ),
-                        Text(
-                          descripcion,
-                          style: const TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text(
-                              "\$" + precio,
-                              style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-                            ),
-                            Container(
-                              margin: EdgeInsets.symmetric(
-                                  vertical: 10.0, horizontal: 20.0),
-                              color: Colors.blue, //Color azul
-                              child: FlatButton(
-                                color: Colors.white,
-                                child: Text("Ver",
-                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.lightBlue),),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context){
-                                          return MenuComida(nombre, descripcion, precio, imagen);
-                                        }),
-                                  );
-                                },
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          alignment: Alignment
+                              .topRight, // ! Averiguar como mandaarlo a la esquina del column
+                          decoration: BoxDecoration(
+                              color: Colors.green.shade400,
+                              border: Border.all(
+                                color: Colors.green.shade400,
                               ),
                               boxShadow: <BoxShadow>[
                                 BoxShadow(
@@ -88,12 +79,22 @@ class MainWidget extends StatelessWidget {
                                   Radius.circular(10))), //Color azul
                           child: TextButton(
                             style: TextButton.styleFrom(primary: Colors.black),
-                            child: Text("Ver"),
+                            child: Text(
+                                "Ver"), // TODO añadirle estilo para que se vea mejor
+                            // color: Colors.white,
+                            // child: Text(
+                            //   "Ver",
+                            //   style: const TextStyle(
+                            //       fontWeight: FontWeight.bold,
+                            //       color: Colors.lightBlue),
+                            // ),
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) => const MenuComida()),
+                                MaterialPageRoute(builder: (context) {
+                                  return MenuComida(
+                                      nombre, descripcion, precio, imagen);
+                                }),
                               );
                             },
                           ),
@@ -106,4 +107,3 @@ class MainWidget extends StatelessWidget {
             ))));
   }
 }
-

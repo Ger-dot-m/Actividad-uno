@@ -30,7 +30,15 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/images/tux.jpg
+    - assets/images/alambre.jpg
+    - assets/images/cebollines.jpg
+    - assets/images/frijoladas.jpg
+    - assets/images/gorditas.png
+    - assets/images/guaraches.jpg
+    - assets/images/quesadillas.jpg
+    - assets/images/sopa_de_tortillas.jpg
+    - assets/images/tostadas.jpg
+    - assets/images/zarape.jpg
     - assets/images/enchiladas.jpeg
     - assets/images/chimichangas.jpg
     - assets/images/burritos.jpg
