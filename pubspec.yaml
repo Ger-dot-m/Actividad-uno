@@ -30,6 +30,7 @@ flutter:
           weight: 300
 
   assets:
+    - assets/JSON/
     - assets/images/
     - assets/images/alambre.jpg
     - assets/images/cebollines.jpg
