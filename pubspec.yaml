@@ -1,0 +1,50 @@
+name: startup_dos
+description: Proyecto POO 1
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  http: ^0.12.0
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  fonts:
+    - family: helloFont
+      fonts:
+        - asset: assets/fonts/hello-regular.ttf
+        - asset: assets/fonts/hello-medium.ttf
+          weight: 300
+
+  assets:
+    - assets/images/
+    - assets/images/alambre.jpg
+    - assets/images/cebollines.jpg
+    - assets/images/frijoladas.jpg
+    - assets/images/gorditas.png
+    - assets/images/guaraches.jpg
+    - assets/images/quesadillas.jpg
+    - assets/images/sopa_de_tortillas.jpg
+    - assets/images/tostadas.jpg
+    - assets/images/zarape.jpg
+    - assets/images/enchiladas.jpeg
+    - assets/images/chimichangas.jpg
+    - assets/images/burritos.jpg
+    - assets/images/pollo.jpg
+    - assets/images/pez_dorado.jpg
+    - assets/images/filete.jpg
+
+  uses-material-design: true
