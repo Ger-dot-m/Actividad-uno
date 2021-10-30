@@ -93,14 +93,14 @@ class MainWidget extends StatelessWidget {
                     Text("\$" + precio,
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black),
-                        textAlign: TextAlign.center),
+                        textAlign: TextAlign.end),
                     Container(
                       child: Text(
-                        "Añadir",
+                        " ",
                         textAlign: TextAlign.end,
                       ),
                     ),
-                    probando(),
+                    /*probando(),*/
                   ],
                 ),
               ],
@@ -108,7 +108,7 @@ class MainWidget extends StatelessWidget {
   }
 }
 
-class probando extends StatefulWidget {
+/*class probando extends StatefulWidget {
   const probando({Key? key}) : super(key: key);
 
   @override
@@ -137,3 +137,4 @@ class _probando extends State<probando> {
     );
   }
 }
+*/
