@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'MenuComida.dart';
 
+// !    Vista del menu
+
+int cantidad = 0;
+
 // ignore: must_be_immutable
 class MainWidget extends StatelessWidget {
   String nombre = "", descripcion, precio, imagen = "";
   MainWidget(this.nombre, this.descripcion, this.precio, this.imagen);
-  bool agregado = false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,7 @@ class MainWidget extends StatelessWidget {
             ],
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Padding(
-            padding: EdgeInsets.only(top: 20, bottom: 0, left: 0, right: 20),
+            padding: EdgeInsets.only(top: 20, bottom: 0, left: 0, right: 0),
             child: Container(
                 // Container de la imagen.
                 child: Column(
@@ -61,9 +64,8 @@ class MainWidget extends StatelessWidget {
                       margin: EdgeInsets.symmetric(
                           vertical: 10.0, horizontal: 10.0),
                       alignment: Alignment.topRight,
-                      // ! Averiguar como mandaarlo a la esquina del column
                       decoration: BoxDecoration(
-                          color: Colors.green.shade400,
+                          color: Colors.blue[100],
                           border: Border.all(
                             color: Colors.green.shade400,
                           ),
@@ -77,8 +79,7 @@ class MainWidget extends StatelessWidget {
                               Radius.circular(10))), //Color azul
                       child: TextButton(
                         style: TextButton.styleFrom(primary: Colors.black),
-                        child: Text(
-                            "Detalles"), // ! añadirle estilo para que se vea mejor
+                        child: Text("Detalles"),
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -90,50 +91,33 @@ class MainWidget extends StatelessWidget {
                         },
                       ),
                     ),
-                    Text("\$" + precio,
+                    Text("\$" + precio + "  ",
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black),
-                        textAlign: TextAlign.center),
-                    Container(
-                      child: Text(
-                        "Añadir",
-                        textAlign: TextAlign.end,
-                      ),
+                        textAlign: TextAlign.start),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Icon(Icons.remove),
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all<Color>(Colors.red)),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          child: Icon(Icons.add),
+                          style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.green)),
+                        ),
+                      ],
                     ),
-                    probando(),
                   ],
                 ),
               ],
             ))));
-  }
-}
-
-class probando extends StatefulWidget {
-  const probando({Key? key}) : super(key: key);
-
-  @override
-  State<probando> createState() => _probando();
-}
-
-/// This is the private State class that goes with MyStatefulWidget.
-class _probando extends State<probando> {
-  bool isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      return Colors.red;
-    }
-
-    return Checkbox(
-      checkColor: Colors.white,
-      fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: isChecked,
-      onChanged: (bool? value) {
-        setState(() {
-          isChecked = value!;
-        });
-      },
-    );
   }
 }

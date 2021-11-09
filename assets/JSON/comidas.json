@@ -1,0 +1,92 @@
+[
+    {
+        "nombre": "Enchiladas rancheras",
+        "descripcion": "Cerdo cocido a fuego lento, cebolla, pimiento, queso, salsa casera, arroz mexicano, crema agria, lechuga, guacamole.",
+        "precio":  "90.00",
+        "imagen": "assets/images/enchiladas.jpeg"
+    },
+    {
+        "nombre": "Chimichanga",
+        "descripcion":  "Pollo marinado, pimiento, pico de gallo, queso, arroz mexicano, guacamole, crema agria y frijoles negros.",
+        "precio":  "70.00",
+        "imagen": "assets/images/chimichangas.jpg"
+    },
+    {
+        "nombre":  "Burrito",
+        "descripcion": "La carne que tú elijas (res, cerdo o pollo) o vegetariano; cebolla, arroz mexicano, pimiento, queso, frijoles negros picantes.",
+        "precio": "45.00",
+        "imagen": "assets/images/burritos.jpg"
+    },
+    {
+        "nombre": "Pollo en chipotle",
+        "descripcion": "Pechuga de pollo adobada, jamón, queso, cebolla asada, jitomate, champiñones, arroz mexicano, frijoles refritos.",
+        "precio":  "110.00",
+        "imagen": "assets/images/pollo.jpg"
+    },
+    {
+        "nombre": "Pez dorado mexicano",
+        "descripcion": "Pez dorado, aguacate, salsa de aguacate con chile serrano, mantequilla de hierbas y cítricos, camarones, guacamole.",
+        "precio":  "180.00",
+        "imagen": "assets/images/pez_dorado.jpg"
+    },
+    {
+        "nombre": "Filete con chimichurri",
+        "descripcion": "Filete de falda de res, salsa chimichurri casera, ensalada fresca, arroz mexicano y frijoles refritos picantes.",
+        "precio": "220.00",
+        "imagen": "assets/images/filete.jpg"
+    },
+    {
+        "nombre": "Tostadas mexicanas",
+        "descripcion": "3 tortillas de tacos doradas, frijol refrito, crema, lechuga, tomate, queso mozzarella, salsa jalapeña, salsa aurora, carne de su elección.",
+        "precio": "220.00",
+        "imagen": "assets/images/tostadas.jpg"
+    },
+    {
+        "nombre": "Zarape",
+        "descripcion": "Combinación de carne, pollo, res, pastor, jamón, tomate, cebolla, chile jalapeño, queso mozzarella, salsa jalapeña, 6 tortillas de taco.",
+        "precio": "100.00",
+        "imagen": "assets/images/zarape.jpg"
+    },
+    {
+        "nombre": "Guaraches",
+        "descripcion": "Orden de 2 guaraches con frijoles y arroz ranchero, aguacate, lechuga, carne a su elección, cuajada y crema, salsa ranchera, cebolla con cilantro.",
+        "precio": "70.00",
+        "imagen": "assets/images/guaraches.jpg"
+    },
+    {
+        "nombre": "Gordita",
+        "descripcion": "Ricas gorditas rellanas de frijol, aguacate, crema, lechuga, queso mozarela, carene de elección, res, pollo, posta, mixto, chorizo, salsa ranchera, salsa jalapeña, cebolla con cilantro.",
+        "precio": "50.00",
+        "imagen": "assets/images/gorditas.png"
+    },
+    {
+        "nombre": "Alambre",
+        "descripcion": "Fajitas de carne asada o pollo gratinado, queso mozzarella, chile jalapeño, cebolla, 6 tortillas de taco, salsa jalapeña, limón.",
+        "precio": "120.00",
+        "imagen": "assets/images/alambre.jpg"
+    },
+    {
+        "nombre": "Quesadillas",
+        "descripcion": "Tortillas de harina rellenas de queso Mozzarella, frijol, guacamol, salsa Aurora, crema y salsa jalapeña.",
+        "precio": "80.00",
+        "imagen": "assets/images/quesadillas.jpg"
+    },
+    {
+        "nombre": "Sopa de tortilla",
+        "descripcion": "Sopa de tortillas doradas con fondo de tomates, especies aromáticas, aguacate, crema, queso Mozzarella, cebolla con cilantro, salsa jalapeña y la carne de su elección.",
+        "precio": "70.00",
+        "imagen": "assets/images/sopa_de_tortillas.jpg"
+    },
+    {
+        "nombre": "Frijoladas mexicanas",
+        "descripcion": "Tortillas de harina rellenas de queso Mozzarella, frijol, guacamol. Salsa Aurora, crema y salsa jalapeña.",
+        "precio": "90.00",
+        "imagen": "assets/images/frijoladas.jpg"
+    },
+    {
+        "nombre": "Cebollines",
+        "descripcion": "Chile jalapeño, salsa jalapeño y limón.",
+        "precio": "30.00",
+        "imagen": "assets/images/cebollines.jpg"
+    }
+]

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// !    Vista de la descripción de la comida
+
 // ignore: must_be_immutable
 class MenuComida extends StatelessWidget {
   String nombre = "", descripcion, precio, imagen = "";
@@ -47,7 +49,7 @@ class MenuComida extends StatelessWidget {
                                     nombre,
                                     textAlign: TextAlign.center,
                                     style: const TextStyle(
-                                        fontSize: 40,
+                                        fontSize: 35,
                                         fontFamily: 'helloFont',
                                         color: Colors.black),
                                   ),
@@ -59,7 +61,7 @@ class MenuComida extends StatelessWidget {
                               padding: EdgeInsets.symmetric(
                                   vertical: 0.0, horizontal: 20.0),
                               child: new Image.asset(imagen,
-                                  width: 150, height: 120),
+                                  width: 230, height: 160),
                             )),
                             stars,
                             Column(
